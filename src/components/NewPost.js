@@ -118,7 +118,7 @@ export default function NewPost({}) {
                 name="pic"
                 onChange={(e) => {
                   setImage(e.target.files[0]);
-                  imgUpload(e.target.files[0]);
+                  imgUpload(image);
                 }}
               />
             </div>
