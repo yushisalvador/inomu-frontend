@@ -10,7 +10,7 @@ function App() {
   const [selectedPost, setSelectedPost] = useState([][0]);
 
   const fetchData = async () => {
-    const response = await axios.get("http://inomubackend.herokuapp.com/");
+    const response = await axios.get("https://inomubackend.herokuapp.com/");
     console.log(response.data);
     setPostData(response.data);
   };

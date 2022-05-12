@@ -48,7 +48,7 @@ export default function NewPost() {
 
   const submitPostReq = async (data) => {
     try {
-      await axios.post("http://inomubackend.herokuapp.com/newpost", data);
+      await axios.post("https://inomubackend.herokuapp.com/newpost", data);
     } catch (error) {
       console.log(error);
     }
