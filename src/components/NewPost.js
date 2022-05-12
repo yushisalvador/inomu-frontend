@@ -4,7 +4,7 @@ import { storage } from "../firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
 
-export default function NewPost({}) {
+export default function NewPost() {
   const [button, setShowButton] = useState(true);
   const [showForm, setShowForm] = useState(false);
   const [username, setUsername] = useState("");
