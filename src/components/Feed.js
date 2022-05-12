@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 export default function Feed({ postData, setView, setSelectedPost }) {
   if (postData !== null) {
     return (
@@ -67,7 +67,6 @@ export default function Feed({ postData, setView, setSelectedPost }) {
                   <img
                     src={postObj.image}
                     alt="cocktail"
-                    object-cover
                     className="object-cover h-48 w-96 mt-5"
                   />{" "}
                   <div

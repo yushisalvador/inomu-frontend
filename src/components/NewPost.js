@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { storage } from "../firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
@@ -13,7 +13,6 @@ export default function NewPost({}) {
   const [cocktail, setCocktail] = useState("");
   const [description, setDescription] = useState("");
   const [recipe, setRecipe] = useState("");
-  const [data, setData] = useState(null);
   const [imageURL, setImageURL] = useState("");
 
   const metadata = {
