@@ -60,7 +60,7 @@ export default function Feed({ postData, setView, setSelectedPost }) {
                 </div>
 
                 <div>
-                  Posted by user{" "}
+                  Posted by user
                   <span className="font-medium">{postObj.username}</span>
                 </div>
                 <div>
