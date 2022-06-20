@@ -1,26 +1,34 @@
 import React from "react";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 
 export default function Navbar() {
-  const navMenu = [
-    { name: "Home" },
-    { name: "Favorites" },
-    {
-      name: "login",
-    },
-  ];
   return (
-    <div className="  w-80 h-screen bg-teal-300  font-extrabold text-black">
-      <div className="text-right mr-10 p-2 text-3xl"> INOMU</div>
-      <ul>
-        {navMenu.map((menu, index) => (
-          <li
-            key={index}
-            className="border-2 w-1/2 p-2 m-4 text-center text-xl float-right"
-          >
-            {menu.name}
-          </li>
-        ))}
-      </ul>
+    <div className="  md:w-80 h-screen bg-teal-300  font-extrabold text-black ">
+      <nav className=" flex flex-col">
+        <Link to="/" className="flex justify-end mr-10 text-4xl mt-6">
+          INOMU
+        </Link>
+
+        <ul className="mt-10">
+          <CustomLink to="/home">Home</CustomLink>{" "}
+          <CustomLink to="/favorites">Favorites</CustomLink>{" "}
+        </ul>
+      </nav>
     </div>
+  );
+}
+
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+  return (
+    <li
+      className={`border-2 w-1/2 p-2 m-2 float-right text-center
+    ${isActive ? "bg-white" : "bg-teal-300"}`}
+    >
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
   );
 }
