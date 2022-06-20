@@ -1,20 +1,26 @@
 import React from "react";
 
 export default function Navbar() {
+  const navMenu = [
+    { name: "Home" },
+    { name: "Favorites" },
+    {
+      name: "login",
+    },
+  ];
   return (
-    <div className="  w-screen bg-teal-300  font-extrabold text-black pt-12">
-      <div className="flex flex-row">
-        <div className="flex-1 text-4xl ml-5 ">INOMU</div>
-        <div className="ml-5 text-2xl mt-auto hover:text-white hover:cursor-pointer">
-          Home
-        </div>
-        <div className="ml-5  text-2xl mt-auto hover:text-white hover:cursor-pointer">
-          Favorites
-        </div>
-        <div className="ml-5  text-2xl mr-5  mt-auto hover:text-white hover:cursor-pointer">
-          Login
-        </div>
-      </div>
+    <div className="  w-80 h-screen bg-teal-300  font-extrabold text-black">
+      <div className="text-right mr-10 p-2 text-3xl"> INOMU</div>
+      <ul>
+        {navMenu.map((menu, index) => (
+          <li
+            key={index}
+            className="border-2 w-1/2 p-2 m-4 text-center text-xl float-right"
+          >
+            {menu.name}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
