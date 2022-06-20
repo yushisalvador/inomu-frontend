@@ -1,5 +1,20 @@
-import React from "react";
-export default function Feed({ postData, setView, setSelectedPost }) {
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+export default function Feed({ setSelectedPost, setView }) {
+  const [postData, setPostData] = useState(null);
+  const getAllPosts = async () => {
+    try {
+      const post = await axios.get("https://inomubackend.herokuapp.com/");
+      setPostData(post.data);
+      console.log(post);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    getAllPosts();
+  }, []);
   if (postData !== null) {
     return (
       <div>
