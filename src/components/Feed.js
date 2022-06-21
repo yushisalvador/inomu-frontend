@@ -1,20 +1,5 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-export default function Feed({ setSelectedPost, setView }) {
-  const [postData, setPostData] = useState(null);
-  const getAllPosts = async () => {
-    try {
-      const post = await axios.get("https://inomubackend.herokuapp.com/");
-      setPostData(post.data);
-      console.log(post);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
-  useEffect(() => {
-    getAllPosts();
-  }, []);
+import React from "react";
+export default function Feed({ setSelectedPost, setView, postData }) {
   if (postData !== null) {
     return (
       <div>
@@ -76,7 +61,7 @@ export default function Feed({ setSelectedPost, setView }) {
 
                 <div>
                   Posted by user
-                  <span className="font-medium">{postObj.username}</span>
+                  <span className="font-medium"> {postObj.username}</span>
                 </div>
                 <div>
                   <img
