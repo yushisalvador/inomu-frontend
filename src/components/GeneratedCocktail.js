@@ -28,8 +28,8 @@ export default function GeneratedCocktail({
                 </div>
                 <div className="font-bold text-lg">Ingredients</div>
                 <ul>
-                  {randomCocktail.ingredients.map((item) => (
-                    <li>{item}</li>
+                  {randomCocktail.ingredients.map((item, index) => (
+                    <li key={index}>{item}</li>
                   ))}
                 </ul>
                 <div className="font-bold text-lg">Instructions</div>
