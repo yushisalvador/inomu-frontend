@@ -10,7 +10,7 @@ export default function App() {
 
   const getAllPosts = async () => {
     try {
-      const post = await axios.get("https://inomubackend.herokuapp.com/");
+      const post = await axios.get("https://inomubackend.herokuapp.com/posts");
       setPostData(post.data);
       console.log(post);
     } catch (e) {

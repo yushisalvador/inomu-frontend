@@ -5,6 +5,7 @@ import GeneratedCocktail from "./GeneratedCocktail";
 export default function Generator() {
   const [randomCocktail, setRandomCocktail] = useState(null);
   const [showGeneratedCocktail, setShowGeneratedCocktail] = useState(null);
+
   const generateNewCocktail = async () => {
     const cocktails = await axios.get(
       "https://www.thecocktaildb.com/api/json/v1/1/random.php"
@@ -14,11 +15,24 @@ export default function Generator() {
       cocktailName: generatedCocktail.strDrink,
       image: generatedCocktail.strDrinkThumb,
       instructions: generatedCocktail.strInstructions,
+      ingredients: getIngredients(generatedCocktail),
     };
-    console.log(generatedCocktail);
     setRandomCocktail(cocktailObj);
-    console.log(cocktailObj);
   };
+
+  const getIngredients = (generatedCocktail) => {
+    let ingredients = [];
+    for (let i = 1; i <= 15; i++) {
+      let ingredient = "strIngredient" + i;
+      if (generatedCocktail[ingredient] !== null) {
+        ingredients.push(generatedCocktail[ingredient]);
+      } else {
+        break;
+      }
+    }
+    return ingredients;
+  };
+
   return (
     <div>
       <button

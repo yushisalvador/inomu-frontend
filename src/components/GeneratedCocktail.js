@@ -26,6 +26,8 @@ export default function GeneratedCocktail({
                 <div className="text-black text-center text-2xl font-bold mb-2">
                   {randomCocktail.cocktailName}
                 </div>
+                <div>Ingredients</div>
+                <div>{randomCocktail.ingredients}</div>
                 <div> {randomCocktail.instructions}</div>
               </div>
             ) : (
