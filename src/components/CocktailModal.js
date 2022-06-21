@@ -65,7 +65,10 @@ export default function CocktailModal({ setShowPostForm }) {
           aria-modal="true"
           aria-labelledby="modal-headline"
         >
-          <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col">
+          <form
+            className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col"
+            onSubmit={handleSubmit}
+          >
             <label>Username</label>
             <input
               type="text"
@@ -111,7 +114,7 @@ export default function CocktailModal({ setShowPostForm }) {
                 }}
               />
             </div>
-          </div>
+          </form>
           <div className="bg-nav px-4 py-3 text-right">
             <button
               onClick={() => setShowPostForm(false)}
