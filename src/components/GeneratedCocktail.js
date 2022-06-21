@@ -22,7 +22,7 @@ export default function GeneratedCocktail({
           <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col">
             {randomCocktail ? (
               <div>
-                <img src={randomCocktail.image} />
+                <img src={randomCocktail.image} alt="cocktail" />
                 <div className="text-black text-center text-2xl font-bold mb-2">
                   {randomCocktail.cocktailName}
                 </div>
