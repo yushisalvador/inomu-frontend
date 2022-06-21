@@ -47,7 +47,7 @@ export default function Navbar() {
 
           <ul className="mt-10">
             <li>
-              <CustomLink to="/home">Home</CustomLink>{" "}
+              <CustomLink to="/">Home</CustomLink>{" "}
             </li>
             <li>
               <CustomLink to="/favorites">Favorites</CustomLink>{" "}

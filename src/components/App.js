@@ -29,7 +29,7 @@ export default function App() {
       </div>
       <div className="flex-1 pt-2 pl-2 pr-2">
         <Routes>
-          <Route path="/home" element={<Home postData={postData} />} />
+          <Route path="/" element={<Home postData={postData} />} />
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </div>
