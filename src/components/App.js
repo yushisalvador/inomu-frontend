@@ -27,7 +27,7 @@ export default function App() {
       <div>
         <Navbar />
       </div>
-      <div className="flex-1 p-12">
+      <div className="flex-1 pt-2 pl-2 pr-2">
         <Routes>
           <Route path="/home" element={<Home postData={postData} />} />
           <Route path="/favorites" element={<Favorites />} />

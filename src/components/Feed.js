@@ -1,30 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import CocktailModal from "./CocktailModal";
 export default function Feed({ setSelectedPost, setView, postData }) {
+  const [showPostForm, setShowPostForm] = useState(false);
   if (postData !== null) {
     return (
       <div>
         <div className="font-bold pb-2 mt-10 text-center text-4xl text-primary border-b border-gray-200">
           Cocktail Feed
         </div>
-        <div className="flex flex-row justify-center mt-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-          <input type="text" className="border-2" />
-        </div>
+        <button
+          className="mt-2 mb-2 border-solid border-2 border-primary p-3 rounded-lg"
+          onClick={() => setShowPostForm(true)}
+        >
+          ADD NEW COCKTAIL
+        </button>
 
-        <div className="flex flex-row flex-wrap justify-center mb-10 ">
+        {showPostForm && <CocktailModal setShowPostForm={setShowPostForm} />}
+        <div className="flex flex-row flex-wrap justify-center mb-10 w-full h-2/3 overflow-y-auto">
           {postData.map((post, index) => {
             const postObj = {
               username: post.username,
@@ -35,7 +27,7 @@ export default function Feed({ setSelectedPost, setView, postData }) {
               posted: post.updated_at,
             };
             return (
-              <div key={index} className=" h-90 w-80 p-4 border-4 ml-10 mt-20">
+              <div key={index} className=" h-90 w-80 p-4 border-4 ml-10 mt-2">
                 <div className="flex flex-row justify-between ">
                   <div className="font-medium text-xl">
                     {" "}
