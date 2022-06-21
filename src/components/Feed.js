@@ -1,19 +1,27 @@
 import React, { useState } from "react";
 import CocktailModal from "./CocktailModal";
+import Generator from "./Generator";
 export default function Feed({ setSelectedPost, setView, postData }) {
   const [showPostForm, setShowPostForm] = useState(false);
   if (postData !== null) {
     return (
       <div>
-        <div className="font-bold pb-2 mt-10 text-center text-4xl text-primary border-b border-gray-200">
+        <div className="font-bold pb-2 mt-4 text-center text-4xl text-primary border-b border-gray-200">
           Cocktail Feed
         </div>
-        <button
-          className="mt-2 mb-2 border-solid border-2 border-primary p-3 rounded-lg"
-          onClick={() => setShowPostForm(true)}
-        >
-          ADD NEW COCKTAIL
-        </button>
+
+        <div className="flex flex-row justify-evenly mt-4">
+          <button
+            title="Share your new discoveries!"
+            className="mt-2 mb-2 border-solid border-4 border-primary p-2 rounded-lg hover:bg-navClick hover:text-white"
+            onClick={() => setShowPostForm(true)}
+          >
+            Add New Cocktail
+          </button>
+          <div>
+            <Generator />
+          </div>
+        </div>
 
         {showPostForm && <CocktailModal setShowPostForm={setShowPostForm} />}
         <div className="flex flex-row flex-wrap justify-center mb-10 w-full h-2/3 overflow-y-auto">

@@ -3,10 +3,12 @@ import React from "react";
 export default function Generator() {
   return (
     <div>
-      <div className="text-center">
-        Don't know what to make? <br></br>Let us pick for you!
-      </div>
-      <button className="border-2 mt-4">Generate cocktail</button>
+      <button
+        title="Don't know what to pick? Let us pick for you!"
+        className="mt-2 mb-2 border-solid border-4 border-primary p-2 rounded-lg hover:bg-navClick hover:text-white "
+      >
+        Generate cocktail
+      </button>
     </div>
   );
 }

@@ -44,7 +44,10 @@ export default function CocktailModal({ setShowPostForm }) {
 
   const submitPostReq = async (data) => {
     try {
-      await axios.post("https://inomubackend.herokuapp.com/newpost", data);
+      await axios.post(
+        "https://inomubackend.herokuapp.com/posts/newpost",
+        data
+      );
     } catch (error) {
       console.log(error);
     }
@@ -65,7 +68,7 @@ export default function CocktailModal({ setShowPostForm }) {
           aria-modal="true"
           aria-labelledby="modal-headline"
         >
-          <form
+          <div
             className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col"
             onSubmit={handleSubmit}
           >
@@ -114,7 +117,7 @@ export default function CocktailModal({ setShowPostForm }) {
                 }}
               />
             </div>
-          </form>
+          </div>
           <div className="bg-nav px-4 py-3 text-right">
             <button
               onClick={() => setShowPostForm(false)}
@@ -124,6 +127,7 @@ export default function CocktailModal({ setShowPostForm }) {
               Cancel
             </button>
             <button
+              onClick={handleSubmit}
               type="submit"
               className="py-2 px-4 bg-red-400 text-white rounded hover:bg-navClick"
             >
