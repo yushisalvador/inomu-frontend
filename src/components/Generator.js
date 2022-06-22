@@ -41,7 +41,7 @@ export default function Generator() {
           generateNewCocktail();
         }}
         title="Don't know what to pick? Let us pick for you!"
-        className="mt-2 mb-2 border-solid border-4 border-primary p-2 rounded-lg hover:bg-navClick hover:text-white "
+        className="mt-2 mb-2 border-solid border-2 border-primary p-2 rounded-full bg-nav scale-100 hover:scale-105 hover:bg-navClick hover:text-white font-semibold"
       >
         Generate cocktail
       </button>

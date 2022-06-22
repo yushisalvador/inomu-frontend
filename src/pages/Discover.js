@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Favorites() {
+export default function Discover() {
   return <div className="text-6xl"> Favorites</div>;
 }

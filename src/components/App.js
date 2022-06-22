@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Home from "../pages/Home";
-import Favorites from "../pages/Favorites";
+import Discover from "../pages/Discover";
 import axios from "axios";
 
 import { Route, Routes } from "react-router-dom";
@@ -30,7 +30,7 @@ export default function App() {
       <div className="flex-1 pt-2 pl-2 pr-2">
         <Routes>
           <Route path="/" element={<Home postData={postData} />} />
-          <Route path="/favorites" element={<Favorites />} />
+          <Route path="/discover" element={<Discover />} />
         </Routes>
       </div>
     </div>

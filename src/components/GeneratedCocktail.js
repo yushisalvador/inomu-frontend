@@ -6,7 +6,7 @@ export default function GeneratedCocktail({
 }) {
   return (
     <div className="fixed z-10 overflow-y-auto top-0 w-full left-0" id="modal">
-      <div className="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+      <div className="flex items-center justify-center h-3/4 pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity">
           <div className="absolute inset-0 bg-gray-500 opacity-20" />
         </div>
@@ -14,12 +14,12 @@ export default function GeneratedCocktail({
           &#8203;
         </span>
         <div
-          className="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+          className="inline-block align-center bg-white rounded-lg text-left shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-headline"
         >
-          <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col">
+          <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 flex flex-col md:h-3/4 overflow-auto">
             {randomCocktail ? (
               <div>
                 <img src={randomCocktail.image} alt="cocktail" />
@@ -40,7 +40,7 @@ export default function GeneratedCocktail({
               <div> Generating cocktail....</div>
             )}
           </div>
-          <div className="bg-nav px-4 py-3 text-right">
+          <div className="bg-nav px-2 py-2 text-right">
             <button
               onClick={() => {
                 setShowGeneratedCocktail(false);

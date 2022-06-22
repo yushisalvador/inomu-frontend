@@ -21,10 +21,10 @@ export default function Feed({ setSelectedPost, setView, postData }) {
           Cocktail Feed
         </div>
 
-        <div className="flex flex-row justify-evenly mt-4">
+        <div className="flex flex-row justify-center mt-4 mb-10">
           <button
             title="Share your new discoveries!"
-            className="mt-2 mb-2 border-solid border-4 border-primary p-2 rounded-lg hover:bg-navClick hover:text-white"
+            className="mt-2 mb-2 border-solid border-2 mr-4 border-primary p-2 bg-nav scale-100 hover:scale-105 rounded-full hover:bg-navClick hover:text-white font-semibold"
             onClick={() => setShowPostForm(true)}
           >
             Add New Cocktail
@@ -35,7 +35,7 @@ export default function Feed({ setSelectedPost, setView, postData }) {
         </div>
 
         {showPostForm && <CocktailModal setShowPostForm={setShowPostForm} />}
-        <div className="flex flex-row flex-wrap justify-center mb-10 w-full h-2/3 overflow-y-auto">
+        <div className="flex flex-row mt-2 md:flex-wrap justify-center mb-10 w-full h-2/3 ">
           {postData.map((post, index) => {
             const postObj = {
               username: post.username,
@@ -47,7 +47,10 @@ export default function Feed({ setSelectedPost, setView, postData }) {
               id: post.id,
             };
             return (
-              <div key={index} className=" h-90 w-80 p-4 border-4 ml-10 mt-2">
+              <div
+                key={index}
+                className=" h-90 w-80 p-4 border-2 ml-10 mt-2 shadow-lg shadow-red-100 rounded-lg scale-100 hover:scale-105"
+              >
                 <div className="flex flex-row justify-between ">
                   <div className="font-medium text-xl">
                     {" "}
