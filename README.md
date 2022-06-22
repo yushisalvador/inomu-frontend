@@ -16,6 +16,11 @@ After that, to start the server, run
 - React
 - Node.js
 
+## Current Features
+- Post a new cocktail recipe
+- Cocktail Feed
+- Random cocktail picker
+
 ## Future Features 
 - Login feature
 - Save cocktail as favorite
