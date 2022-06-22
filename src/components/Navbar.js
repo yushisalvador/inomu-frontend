@@ -38,7 +38,7 @@ export default function Navbar() {
         className={`md:w-80 h-screen bg-nav font-extrabold text-black absolute inset-y-0 left-0 transform z-40
           ${
             open ? "-translate-x-full" : ""
-          } md:relative md:translate-x-0 transition duration-200 ease-in-out`}
+          } md:relative md:translate-x-0 transition duration-200 ease-in-out `}
       >
         <nav className=" flex flex-col">
           <Link to="/" className="flex justify-end mr-10 text-4xl mt-6">

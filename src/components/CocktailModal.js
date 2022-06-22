@@ -37,6 +37,7 @@ export default function CocktailModal({ setShowPostForm }) {
       ingredients: ingredients,
       recipe: recipe,
     };
+    console.log(newPostObj);
     setShowPostForm(false);
     submitPostReq(newPostObj);
   };

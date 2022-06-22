@@ -1,8 +1,19 @@
 import React, { useState } from "react";
 import CocktailModal from "./CocktailModal";
+import axios from "axios";
 import Generator from "./Generator";
 export default function Feed({ setSelectedPost, setView, postData }) {
   const [showPostForm, setShowPostForm] = useState(false);
+
+  const deletePost = async (id) => {
+    try {
+      await axios.delete(`https://inomubackend.herokuapp.com/posts/${id}`);
+    } catch (error) {
+      console.log(error);
+      alert("Failed to delete post");
+    }
+  };
+
   if (postData !== null) {
     return (
       <div>
@@ -33,6 +44,7 @@ export default function Feed({ setSelectedPost, setView, postData }) {
               ingredients: post.ingredients,
               recipe: post.recipe,
               posted: post.updated_at,
+              id: post.id,
             };
             return (
               <div key={index} className=" h-90 w-80 p-4 border-4 ml-10 mt-2">
@@ -43,8 +55,11 @@ export default function Feed({ setSelectedPost, setView, postData }) {
                   </div>
                   <div>
                     <svg
+                      onClick={() => {
+                        deletePost(postObj.id);
+                      }}
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-6 text-white hover:text-black"
+                      className="h-4 w-6 text-white hover:text-black hover:cursor-pointer hover:bg-gray-100"
                       fill="white"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
