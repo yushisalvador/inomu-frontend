@@ -16,7 +16,8 @@ export default function Feed({ setSelectedPost, setView, postData }) {
 
   if (postData !== null) {
     return (
-      <div>
+      <div className="mt-10">
+        <hr></hr>
         <div className="font-bold pb-2 mt-4 text-center text-4xl text-primary border-b border-gray-200">
           Cocktail Feed
         </div>

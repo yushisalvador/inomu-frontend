@@ -6,7 +6,6 @@ export default function Navbar() {
   return (
     <div>
       <div className=" bg-nav text-gray-100 w-screen flex flex-row justify-end md:hidden">
-        {/* <div className="text-xl">Inomu</div> */}
         <button
           className="p-4 focus:outline-none focus:bg-navClick"
           onClick={() => {
@@ -35,10 +34,10 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`md:w-80 h-screen bg-nav font-extrabold text-black absolute inset-y-0 left-0 transform z-40
+        className={`md:w-80 h-screen bg-nav font-extrabold text-black inset-y-0 left-0 transform z-10 overflow-x-hidden fixed
           ${
-            open ? "-translate-x-full overflow-hidden" : ""
-          } md:relative md:translate-x-0 transition duration-200 ease-in-out `}
+            open ? "-translate-x-full overflow-x-hidden" : "overflow-x-hidden"
+          } md:translate-x-0 transition duration-200 ease-in-out `}
       >
         <nav className=" flex flex-col">
           <Link to="/" className="flex justify-end mr-10 text-4xl mt-6">

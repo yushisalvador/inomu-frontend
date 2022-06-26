@@ -23,7 +23,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen md:flex">
+    <div className="relative md:flex">
       <div>
         <Navbar />
       </div>
