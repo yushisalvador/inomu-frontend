@@ -40,7 +40,7 @@ export default function Navbar() {
           } md:translate-x-0 transition duration-200 ease-in-out `}
       >
         <nav className=" flex flex-col">
-          <Link to="/" className="flex justify-end mr-10 text-4xl mt-6">
+          <Link to="/" className="flex justify-end md:mr-10 text-4xl md:mt-6">
             INOMU
           </Link>
 

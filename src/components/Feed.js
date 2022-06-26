@@ -36,6 +36,7 @@ export default function Feed({ setSelectedPost, setView, postData }) {
         </div>
 
         {showPostForm && <CocktailModal setShowPostForm={setShowPostForm} />}
+
         <div className="flex flex-row mt-2 md:flex-wrap justify-center mb-10 w-full h-2/3 ">
           {postData.map((post, index) => {
             const postObj = {
