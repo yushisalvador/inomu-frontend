@@ -54,7 +54,7 @@ export default function Discover() {
     <div className="md:flex flex-col items-center justify-center ">
       <div className="md:text-2xl p-4 flex justify-center">
         <div className="text-center">
-          Feeling spontaneous? Check out our cocktails list!
+          Feeling spontaneous? Check out our cocktail list!
         </div>
       </div>
 
@@ -83,7 +83,7 @@ export default function Discover() {
           cocktailData.map((drink) => (
             <div
               key={drink.idDrink}
-              className=" border-4 rounded md:ml-10 md:flex mt-10 flex flex-col p-4 scale-100 hover:scale-110 shadow-lg shadow-red-100 "
+              className=" border rounded-lg md:ml-10 md:flex mt-10 flex flex-col p-4 scale-100 hover:scale-110 shadow-lg shadow-red-300 bg-white bg-opacity-60"
             >
               <img
                 src={drink.strDrinkThumb}
@@ -107,7 +107,7 @@ export default function Discover() {
           ))
         ) : (
           <div>
-            <div className="text-4xl">Loading drinks...</div>
+            <div className="text-4xl mt-10">Loading drinks...</div>
           </div>
         )}
         {showCocktailModal && (

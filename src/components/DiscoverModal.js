@@ -6,7 +6,7 @@ export default function DiscoverModal({
 }) {
   return (
     <div className="fixed z-10 overflow-y-auto top-0 w-full left-0" id="modal">
-      <div className="flex items-center justify-center h-3/4 pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+      <div className="flex items-center justify-center pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity">
           <div className="absolute inset-0 bg-gray-500 opacity-20" />
         </div>
@@ -37,7 +37,7 @@ export default function DiscoverModal({
                 <div> {discoverCocktailInfo.instructions}</div>
               </div>
             ) : (
-              <div> Generating cocktail....</div>
+              <div> Loading..</div>
             )}
           </div>
           <div className="bg-nav px-2 py-2 text-right">

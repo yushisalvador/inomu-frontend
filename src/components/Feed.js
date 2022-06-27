@@ -25,7 +25,7 @@ export default function Feed({ setSelectedPost, setView, postData }) {
         <div className="flex flex-row justify-center mt-4 mb-10">
           <button
             title="Share your new discoveries!"
-            className="mt-2 mb-2 border-solid border-2 mr-4 border-primary p-2 bg-nav scale-100 hover:scale-105 rounded-full hover:bg-navClick hover:text-white font-semibold"
+            className="mt-2 mb-2 border-solid border-2 mr-4 border-primary p-2 bg-navClick scale-100 hover:scale-105 rounded-full hover:bg-white hover:text-navClick font-semibold"
             onClick={() => setShowPostForm(true)}
           >
             Add New Cocktail
@@ -51,14 +51,14 @@ export default function Feed({ setSelectedPost, setView, postData }) {
             return (
               <div
                 key={index}
-                className=" h-90 md:w-80 p-4 border-2 md:ml-10 mt-2 shadow-lg shadow-red-100 rounded-lg scale-100 hover:scale-105 "
+                className=" bg-white h-90 md:w-80 p-4 border md:ml-10 mt-2 shadow-lg shadow-red-300 rounded-lg scale-100 hover:scale-105 "
               >
                 <div className="flex flex-row justify-between ">
                   <div className="font-medium text-xl">
                     {" "}
                     {postObj.cocktail_name}
                   </div>
-                  <div>
+                  <div title="Delete cocktail">
                     <svg
                       onClick={() => {
                         deletePost(postObj.id);

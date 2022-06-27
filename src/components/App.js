@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Home from "../pages/Home";
 import Discover from "../pages/Discover";
 import axios from "axios";
+import Login from "../pages/Login";
 
 import { Route, Routes } from "react-router-dom";
 export default function App() {
@@ -31,6 +32,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home postData={postData} />} />
           <Route path="/discover" element={<Discover />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </div>
