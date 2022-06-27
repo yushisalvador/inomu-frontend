@@ -4,8 +4,7 @@ export default function Carousel() {
   return (
     <div>
       <div
-        id="carouselExampleSlidesOnly"
-        className="carousel slide relative md:ml-48"
+        className="carousel slide relative md:ml-48 md:mt-8"
         data-bs-ride="carousel"
       >
         <div className="carousel-inner relative w-full overflow-hidden">

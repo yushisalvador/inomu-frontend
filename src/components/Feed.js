@@ -37,7 +37,7 @@ export default function Feed({ setSelectedPost, setView, postData }) {
 
         {showPostForm && <CocktailModal setShowPostForm={setShowPostForm} />}
 
-        <div className="flex flex-row mt-2 md:flex-wrap justify-center mb-10 w-full h-2/3 ">
+        <div className="md:flex flex-row mt-2 md:flex-wrap justify-center mb-10 w-full h-2/3 pb-2">
           {postData.map((post, index) => {
             const postObj = {
               username: post.username,
@@ -51,7 +51,7 @@ export default function Feed({ setSelectedPost, setView, postData }) {
             return (
               <div
                 key={index}
-                className=" h-90 w-80 p-4 border-2 ml-10 mt-2 shadow-lg shadow-red-100 rounded-lg scale-100 hover:scale-105"
+                className=" h-90 md:w-80 p-4 border-2 md:ml-10 mt-2 shadow-lg shadow-red-100 rounded-lg scale-100 hover:scale-105 "
               >
                 <div className="flex flex-row justify-between ">
                   <div className="font-medium text-xl">
