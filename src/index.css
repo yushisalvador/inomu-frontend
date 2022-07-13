@@ -2,6 +2,10 @@ body {
   background-color: #f6e5e5;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 .sidebar {
   position: -webkit-sticky;
   position: sticky;

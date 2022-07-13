@@ -1,4 +1,3 @@
-import { areCookiesEnabled } from "@firebase/util";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import DiscoverModal from "../components/DiscoverModal";

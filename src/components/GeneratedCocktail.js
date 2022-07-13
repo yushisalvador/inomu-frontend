@@ -6,9 +6,9 @@ export default function GeneratedCocktail({
 }) {
   return (
     <div className="fixed z-10 overflow-y-auto top-0 w-full left-0" id="modal">
-      <div className="flex items-center justify-center h-3/4 pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-        <div className="fixed inset-0 transition-opacity">
-          <div className="absolute inset-0 bg-gray-500 opacity-20" />
+      <div className="flex items-center justify-center h-3/4 pt-4 px-4 pb-20 text-center sm:block sm:p-2">
+        <div className="fixed inset-0 transition-opacity overflow-y-auto">
+          <div className="absolute inset-0 bg-gray-500 opacity-20 max-h-max " />
         </div>
         <span className="hidden sm:inline-block sm:align-middle sm:h-screen">
           &#8203;
