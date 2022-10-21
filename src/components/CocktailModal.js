@@ -5,7 +5,6 @@ import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
 export default function CocktailModal({ setShowPostForm }) {
   const [username, setUsername] = useState("");
-  const [image, setImage] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [cocktail, setCocktail] = useState("");
   const [description, setDescription] = useState("");
@@ -18,7 +17,7 @@ export default function CocktailModal({ setShowPostForm }) {
 
   const imgUpload = async (image) => {
     try {
-      const imageRef = ref(storage, `cocktails/${image.name + v4()}`);
+      const imageRef = ref(storage, `${image.name + v4()}`);
       const snapshot = await uploadBytes(imageRef, image, metadata);
       const url = await getDownloadURL(snapshot.ref);
       setImageURL(url);
@@ -118,8 +117,7 @@ export default function CocktailModal({ setShowPostForm }) {
                 type="file"
                 name="pic"
                 onChange={(e) => {
-                  setImage(e.target.files[0]);
-                  imgUpload(image);
+                  imgUpload(e.target.files[0]);
                 }}
               />
             </div>
